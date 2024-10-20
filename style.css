@@ -30,14 +30,14 @@ header nav ul {
 }
 
 header nav ul li {
-    margin: 0 10px;
+    margin: 0 7px;
 }
 
 header nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 1.1rem;
-    padding: 8px 17px;
+    padding: 5px 11px;
     transition: background-color 0.3s;
 }
 
