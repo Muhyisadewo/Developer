@@ -30,7 +30,7 @@ header nav ul {
 }
 
 header nav ul li {
-    margin: 0 13px;
+    margin: 0 10px;
 }
 
 header nav ul li a {
@@ -271,6 +271,19 @@ footer p {
 .portfolio-section {
     background-color: #f4f4f4;
     padding: 60px 20px;
+}
+
+.portfolio-item .kunj{
+  list-style: none;
+    background-color: #FF7043; /* Vibrant orange */
+    color: white;
+    padding: 6px 20px;
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    transition: background-color 0.3s;
+    z-index: 1;
 }
 
 .portfolio-list {
