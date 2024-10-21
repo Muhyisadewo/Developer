@@ -75,6 +75,18 @@ header nav ul li a:hover {
     left: 0;
     right: 0;
     position: absolute;
+    
+    /* Animasi Muncul ke Atas */
+    opacity: 0;
+    transform: translateY(50px); /* Mulai dari bawah */
+    animation: slide-up 1.5s ease-out forwards; /* Durasi dan transisi */
+}
+
+@keyframes slide-up {
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Berhenti di posisi normal */
+    }
 }
 
 .hero p {
@@ -86,15 +98,42 @@ header nav ul li a:hover {
     right: 0;
     color: white;
     position: absolute;
+
+    /* Animasi Diketik */
+    opacity: 0;
+    overflow: hidden; /* Menyembunyikan teks yang belum muncul */
+    border-right: 2px solid white; /* Memberikan efek kursor */
+    white-space: nowrap;
+    width: 0; /* Awalnya tanpa teks yang terlihat */
+    animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite; /* Durasi dan animasi */
 }
+
+@keyframes typing {
+    from {
+        width: 0; /* Mulai dari teks yang tidak terlihat */
+        opacity: 1;
+    }
+    to {
+        width: 100%; /* Teks muncul sepenuhnya */
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: white; /* Kursor berkedip */
+    }
+}
+
 
 .hero .cta {
     display: inline-block;
     background-color: #FF7043; /* Vibrant orange */
     color: white;
     padding: 12px 30px;
-    margin-top: 20px;
-    text-decoration: none;
+    ;
     font-size: 1.2rem;
     border-radius: 50px;
     transition: background-color 0.3s;
