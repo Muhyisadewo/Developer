@@ -93,38 +93,16 @@ header nav ul li a:hover {
     font-size: 1.4rem;
     margin-top: 20px;
     z-index: 1000;
+    color: white;
+    position: absolute;
     top: 31%;
     left: 0;
     right: 0;
-    color: white;
-    position: absolute;
-
-    /* Animasi Diketik */
+    
+    /* Animasi Muncul ke Atas */
     opacity: 0;
-    overflow: hidden; /* Menyembunyikan teks yang belum muncul */
-    border-right: 2px solid white; /* Memberikan efek kursor */
-    white-space: nowrap;
-    width: 0; /* Awalnya tanpa teks yang terlihat */
-    animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite; /* Durasi dan animasi */
-}
-
-@keyframes typing {
-    from {
-        width: 0; /* Mulai dari teks yang tidak terlihat */
-        opacity: 1;
-    }
-    to {
-        width: 100%; /* Teks muncul sepenuhnya */
-    }
-}
-
-@keyframes blink-caret {
-    from, to {
-        border-color: transparent;
-    }
-    50% {
-        border-color: white; /* Kursor berkedip */
-    }
+    transform: translateY(50px); /* Mulai dari bawah */
+    animation: slide-up 1.5s ease-out forwards; /* Durasi dan transisi */
 }
 
 
